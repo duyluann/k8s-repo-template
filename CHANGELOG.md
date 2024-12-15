@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+# 1.0.0 (2024-12-15)
+
+
+### Features
+
+* create gitops ([#3](https://github.com/duyluann/k8s-repo-template/issues/3)) ([ca70712](https://github.com/duyluann/k8s-repo-template/commit/ca70712fabb717531bf0425588590c3c107c1b7c))
+
 # [1.4.0](https://github.com/duyluann/github-repo-template/compare/v1.3.4...v1.4.0) (2024-09-12)
 
 
