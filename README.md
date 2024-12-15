@@ -21,7 +21,18 @@ Welcome to the Kubernetes Helm Chart Template repository! This repository provid
 ├── README.md                      # Project documentation
 ```
 
+## 🚀 Getting Started
+
+To use this template for your own Kubernetes-based application:
+
+1. Clone this repository.
+2. Modify the `charts/my-app/values.yaml` file to set the appropriate values for your application (e.g., Docker image, replicas).
+3. Customize the Dockerfile to build your application’s Docker image.
+4. Update the `gitops.yml` GitHub Actions workflow if necessary for your specific Docker registry and ArgoCD setup.
+5. Apply the Helm chart to your Kubernetes cluster using ArgoCD.
+
 ## ⚙️ Semantic Commit Messages
+
 This project uses [Semantic Commit Messages](https://www.conventionalcommits.org/) to ensure meaningful and consistent commit history. The format is as follows:
 
 ```php
