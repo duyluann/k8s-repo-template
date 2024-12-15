@@ -1,34 +1,26 @@
-# 🛠️ GitHub Repo Template
+# 🛠️ Kubernetes Helm Chart Template
 
-Welcome to the Template Repository on GitHub! This repository is designed to serve as a starting point for creating new Git repositories with best practices and configurations already set up. Below is a brief overview of the structure and the purpose of each file and directory in this repository.
+Welcome to the Kubernetes Helm Chart Template repository! This repository provides a template for deploying Kubernetes applications using Helm charts, Docker, and GitHub Actions for CI/CD. It integrates with ArgoCD for GitOps-style deployments, allowing automated application updates and synchronization with the cluster.
 
 ## 📁 Repository Structure
-
 ```text
 .
-├── .editorconfig                       # 🖊️ Configuration for consistent coding styles
-├── .github                             # 🛠️ GitHub-specific configurations
-│   ├── ISSUE_TEMPLATE                  # 📝 GitHub issue template
-│   │   └── issue_template.md           # 📝 Issue template file
-│   ├── dependabot.yml                  # 🤖 Dependabot configuration
-│   ├── pull_request_template.md        # 📝 Pull request template
-│   └── workflows                       # ⚙️ GitHub Actions workflows
-│       ├── deps-review.yaml            # 📋 Dependency review workflow
-│       ├── lint-pr.yaml                # 🧹 Linting workflow for pull requests
-│       ├── pre-commit-auto-update.yaml # 🔄 Pre-commit hook auto-update workflow
-│       ├── release.yaml                # 🚀 Release workflow
-│       ├── stale.yaml                  # ⏳ Stale issue management workflow
-│       └── template-repo-sync.yaml     # 🔄 Template repository sync workflow
-├── .gitignore                          # 🚫 Files and directories to be ignored by Git
-├── .pre-commit-config.yaml             # 🛠️ Pre-commit hooks configuration
-├── .releaserc.json                     # 🚀 Semantic release configuration
-├── .vscode                             # 🖥️ VSCode-specific configurations
-│   └── extensions.json                 # 🛠️ Recommended extensions for VSCode
-├── CHANGELOG.md                        # 📝 Change log of the project
-├── CODEOWNERS                          # 👥 Defines the code owners for the repository
-├── LICENSE                             # ⚖️ License for the project
-└── README.md                           # 📖 Project documentation (this file)
+├── charts/                        # Helm charts for Kubernetes resources
+│   └── my-app/                    # Example Helm chart for the application
+│       ├── Chart.yaml             # Helm chart metadata
+│       ├── values.yaml            # Default values for the chart (image, replicas, etc.)
+│       ├── charts/                # Subcharts (if any dependencies are used)
+│       ├── templates/             # Kubernetes resource templates (Deployment, Service, etc.)
+│       │   ├── deployment.yaml    # Application deployment template
+│       │   ├── service.yaml       # Service for exposing the app
+│       │   └── ingress.yaml       # Optional ingress resource
+│       └── README.md              # Documentation for using the Helm chart
+├── .github/                       # GitHub-specific configurations
+│   └── workflows/                 # GitHub Actions workflows for CI/CD
+├── Dockerfile                     # Dockerfile for building the app container
+├── README.md                      # Project documentation
 ```
+
 ## ⚙️ Semantic Commit Messages
 This project uses [Semantic Commit Messages](https://www.conventionalcommits.org/) to ensure meaningful and consistent commit history. The format is as follows:
 
