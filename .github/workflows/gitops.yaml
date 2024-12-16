@@ -11,7 +11,7 @@ on:
 jobs:
   build:
     name: Build Docker Image
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -28,7 +28,7 @@ jobs:
 
   update:
     name: Update Helm Chart
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     needs: build
     steps:
       - name: Checkout code
