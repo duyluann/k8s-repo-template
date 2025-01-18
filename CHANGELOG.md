@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+# [1.1.0](https://github.com/duyluann/k8s-repo-template/compare/v1.0.0...v1.1.0) (2025-01-18)
+
+
+### Features
+
+* Create update-license.yml ([b3d3b7a](https://github.com/duyluann/k8s-repo-template/commit/b3d3b7a74b66e867251a7ba41c3bb0b07c16b09d))
+
 # 1.0.0 (2024-12-15)
 
 
