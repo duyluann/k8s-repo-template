@@ -1,4 +1,4 @@
-name: Auto-merge PR from bot
+name: Auto-merge PR
 
 on: pull_request
 
