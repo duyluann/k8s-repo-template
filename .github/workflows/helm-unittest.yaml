@@ -1,0 +1,24 @@
+name: Helm Chart Unit Test
+
+on:
+  pull_request:
+    paths:
+      - 'charts/**'
+
+jobs:
+  helm-unittest:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Helm
+        uses: azure/setup-helm@v4
+        with:
+          version: v3.14.0
+
+      - name: Install helm-unittest plugin
+        run: helm plugin install https://github.com/helm-unittest/helm-unittest
+
+      - name: Run helm unittest
+        run: helm unittest charts/my-app
